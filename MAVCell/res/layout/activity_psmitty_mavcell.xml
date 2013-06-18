@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="psmitty.mavcell.MAVCell" >
+    <LinearLayout android:orientation="horizontal"
+	    android:layout_weight="0.50"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical"
+		    android:layout_weight="0.50"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent">
+		    <Button
+		        android:id="@+id/btnBegin"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:onClick="onBeginClick"
+		        android:text="Open COM Port" />	
+		    <Button
+		        android:id="@+id/btnRead"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:onClick="onReadClick"
+		        android:text="Start COM/TCP" />	
+		    <Button
+		        android:id="@+id/btnEnd"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:onClick="onEndClick"
+		        android:text="Close COM/TCP" />
+
+		    <CheckBox
+		        android:id="@+id/debugOn"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="View Feed?" />
+
+		    <TextView
+		        android:id="@+id/textView5"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="       (CPU Intensive)"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+		    </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.50"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baud Rate"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/baudRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:text="57600" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Server or Client?" />
+
+            <CheckBox
+                android:id="@+id/serverMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Server Mode?" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Client Mode IP" />
+
+            <EditText
+                android:id="@+id/serverIP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="192.168.1.1" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Server/Client Port"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/portNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="5"
+                android:maxLines="1"
+                android:text="8080" >
+
+                <requestFocus />
+            </EditText>
+
+        </LinearLayout>
+
+ 	</LinearLayout> 
+	<LinearLayout android:orientation="vertical"
+	    android:layout_weight="0.50"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">	
+	    <TextView
+	        android:id="@+id/tvMonitor"
+	        android:layout_width="match_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="0.50"
+	        android:background="@drawable/back"
+	        android:maxLines="10" />
+	    </LinearLayout> 
+</LinearLayout>
